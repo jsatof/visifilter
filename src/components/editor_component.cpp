@@ -27,19 +27,23 @@ EditorComponent::EditorComponent()
 void EditorComponent::resized() {
 	int margin = 50;
 	int padding = 5;
-	auto region = getLocalBounds();
-
-	auto wave_view_bounds = region.removeFromBottom(region.getHeight() - margin);
-	waveform_view_component.setBounds(wave_view_bounds);
+	auto region = getLocalBounds().removeFromTop(getHeight() - margin);
 
 	solo_button.setBounds(region.removeFromLeft(margin).reduced(padding));
 	mute_button.setBounds(region.removeFromLeft(margin).reduced(padding));
 	wave_flip_button.setBounds(region.removeFromLeft(margin).reduced(padding));
+
+	waveform_view_component.setBounds(region.removeFromLeft(margin).removeFromBottom(region.getHeight() - margin));
 }
 
 void EditorComponent::paint(juce::Graphics &g) {
 	g.setColour(juce::Colours::seagreen);
+	g.fillRect(getBounds());
+
+	g.setColour(juce::Colours::brown);
 	g.fillRect(waveform_view_component.getBounds());
+	g.setColour(juce::Colours::black);
+	g.drawRect(waveform_view_component.getBounds(), 1);
 }
 
 void EditorComponent::buttonClicked(juce::Button *button) {
