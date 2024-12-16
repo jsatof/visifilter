@@ -1,7 +1,0 @@
-Import("env")
-env = env.Clone()
-
-visifilter_sources = [
-	"main.cpp",
-]
-env.Program(target="visifilter", source=visifilter_sources)
