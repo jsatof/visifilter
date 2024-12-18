@@ -6,13 +6,13 @@
 
 class EditorComponent : public juce::Component {
 public:
-	EditorComponent();
+    EditorComponent();
 
-	void resized() override;
-	void paint(juce::Graphics &g) override;
+    void resized() override;
+    void paint(juce::Graphics &g) override;
 
 private:
-	AudioTrackComponent audio_track;
+    AudioTrackComponent audio_track;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(EditorComponent)
 };

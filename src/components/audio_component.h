@@ -4,14 +4,14 @@
 
 class AudioComponent : public juce::AudioAppComponent {
 public:
-	AudioComponent(int inputChannels=2, int outputChannels=0);
-	~AudioComponent();
+    AudioComponent(int inputChannels=2, int outputChannels=0);
+    ~AudioComponent();
 
-	void prepareToPlay(int samplesExpected, double sampleRate) override;
-	void releaseResources() override;
-	void getNextAudioBlock(const juce::AudioSourceChannelInfo &info) override;
+    void prepareToPlay(int samplesExpected, double sampleRate) override;
+    void releaseResources() override;
+    void getNextAudioBlock(const juce::AudioSourceChannelInfo &info) override;
 
 private:
-	//juce::ReaderSource reader_source;
+    //juce::ReaderSource reader_source;
 
 };

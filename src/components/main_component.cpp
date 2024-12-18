@@ -11,11 +11,11 @@ MainComponent::MainComponent() {
 }
 
 void MainComponent::paint(juce::Graphics& g) {
-	g.fillAll(juce::Colours::cornflowerblue);
-	g.setColour(juce::Colours::beige);
-	g.setFont(16.f);
+    g.fillAll(juce::Colours::cornflowerblue);
+    g.setColour(juce::Colours::beige);
+    g.setFont(16.f);
 }
 
 void MainComponent::resized() {
-	editor_component.setBounds(getLocalBounds());
+    editor_component.setBounds(getLocalBounds());
 }

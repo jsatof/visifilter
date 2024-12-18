@@ -6,17 +6,23 @@
 
 class AudioTrackComponent : public juce::Component, public juce::Button::Listener {
 public:
-	AudioTrackComponent();
+    AudioTrackComponent();
 
-	void buttonClicked(juce::Button *button) override;
-	void paint(juce::Graphics &g) override;
-	void resized() override;
+    // overloads
+    void buttonClicked(juce::Button *button) override;
+    void paint(juce::Graphics &g) override;
+    void resized() override;
+
 
 private:
-	const int io_region_w;
+    static void on_load_file_clicked();
 
-	juce::ToggleButton solo_button;
-	juce::ToggleButton mute_button;
-	juce::ToggleButton wave_flip_button; // polarity flip toggle
-	WaveformViewComponent waveform_view;
+    const int io_region_w;
+
+    juce::Label track_name_label;
+    juce::TextButton load_file_button;
+    juce::ToggleButton solo_button;
+    juce::ToggleButton mute_button;
+    juce::ToggleButton wave_flip_button; // polarity flip toggle
+    WaveformViewComponent waveform_view;
 };

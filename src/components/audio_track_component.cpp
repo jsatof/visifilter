@@ -46,8 +46,8 @@ void AudioTrackComponent::resized() {
     constexpr int button_w = 50, button_h = 20;
     constexpr int margin = 10;
 
-    track_name_label.setBounds(margin + button_w, margin + getBounds().getY(), 100, 32);
-    load_file_button.setBounds(margin + button_w, 2* margin + getBounds().getY(), 100, 32);
+    track_name_label.setBounds(margin + button_w,     margin + getBounds().getY(), 100, 32);
+    load_file_button.setBounds(margin + button_w, 2 * margin + getBounds().getY(), 100, 32);
 
     solo_button.setBounds(     margin + (0 * button_w), (getHeight() + button_h) / 2, button_w, button_h);
     mute_button.setBounds(     margin + (1 * button_w), (getHeight() + button_h) / 2, button_w, button_h);
