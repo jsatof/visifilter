@@ -15,6 +15,7 @@ target_sources(visifilter
     PRIVATE
     	main.cpp
     	components/audio_component.cpp
+        components/audio_track_component.cpp
     	components/editor_component.cpp
     	components/main_component.cpp
     	components/waveform_view_component.cpp
