@@ -5,13 +5,13 @@
 
 class WaveformViewComponent : public juce::Component {
 public:
-	WaveformViewComponent();
+    WaveformViewComponent();
 
-	// juce::Component overrides
-	void paint(juce::Graphics &g) override;
+    // juce::Component overrides
+    void paint(juce::Graphics &g) override;
 
-	void setAudioData(const juce::AudioBuffer<float> &buffer);
+    void setAudioData(const juce::AudioBuffer<float> &buffer);
 
 private:
-	std::vector<float> waveform_data;
+    std::vector<float> waveform_data;
 };

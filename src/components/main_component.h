@@ -16,7 +16,7 @@ public:
     void resized() override;
 
 private:
-	EditorComponent editor_component;
+    EditorComponent editor_component;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MainComponent)
 };
