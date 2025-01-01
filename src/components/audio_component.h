@@ -12,6 +12,7 @@ public:
     void getNextAudioBlock(const juce::AudioSourceChannelInfo &info) override;
 
 private:
+    std::unique_ptr<juce::FileChooser> file_chooser;
     //juce::ReaderSource reader_source;
 
 };

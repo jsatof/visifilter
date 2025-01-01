@@ -58,7 +58,7 @@ public:
         */
 
     private:
-		juce::ApplicationCommandManager command_manager;
+        juce::ApplicationCommandManager command_manager;
 
         JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MainWindow)
     };

@@ -8,6 +8,7 @@ static int main_height = 750;
 MainComponent::MainComponent() {
     setSize(main_width, main_height);
     addAndMakeVisible(editor_component);
+    setVisible(false);
 }
 
 void MainComponent::paint(juce::Graphics& g) {

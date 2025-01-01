@@ -13,17 +13,19 @@ juce_generate_juce_header(visifilter)
 
 target_sources(visifilter
     PRIVATE
-    	main.cpp
-    	components/audio_component.cpp
+        main.cpp
+        components/audio_component.cpp
         components/audio_track_component.cpp
-    	components/editor_component.cpp
-    	components/main_component.cpp
-    	components/waveform_view_component.cpp
+        components/bench_component.cpp
+        components/editor_component.cpp
+        components/main_component.cpp
+        components/waveform_view_component.cpp
+        util/ring_buffer.cpp
 )
 
 target_include_directories(visifilter
     PRIVATE
-    	${JUCE_SOURCE_DIR}/modules
+        ${JUCE_SOURCE_DIR}/modules
         .
 )
 
@@ -36,7 +38,7 @@ target_compile_definitions(visifilter
 
 target_link_libraries(visifilter
     PRIVATE
-    	juce::juce_audio_utils
+        juce::juce_audio_utils
         fmt::fmt
     PUBLIC
         juce::juce_recommended_config_flags
